@@ -1,5 +1,6 @@
 # Todo App - OpenAPI Documents
 
+![CI](https://github.com/nicolastakashi/todoapp-openapidocuments/workflows/CI/badge.svg?branch=master)
 
 ## Runing
 
