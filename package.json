@@ -1,0 +1,21 @@
+{
+  "name": "todoapi-spec",
+  "version": "1.0.0",
+  "description": "OpenAPI specification for TodoAPI",
+  "main": "index.js",
+  "author": "Nicolas Takashi",
+  "license": "MIT",
+  "scripts": {
+    "premock": "yarn bundle",
+    "mock": "prism mock ./bin/api.yaml -d",
+    "bundle": "swagger-cli bundle specs/api.yaml -o ./bin/api.yaml -t yaml",
+    "prelint": "yarn bundle",
+    "lint": "spectral lint ./bin/api.yaml --ignore-unknown-format"
+  },
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "^1.0.12-4.3.0",
+    "@stoplight/prism-cli": "^3.3.3",
+    "@stoplight/spectral": "^5.3.0",
+    "swagger-cli": "^4.0.2"
+  }
+}

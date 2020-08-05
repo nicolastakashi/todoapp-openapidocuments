@@ -1,0 +1,22 @@
+components:
+  parameters:
+    page:
+      in: query
+      description: Desired page
+      name: page
+      schema:
+        type: integer
+        format: int32
+        default: 1
+        minimum: 1
+        maximum: 2147483647
+    pageSize:
+      in: query
+      description: Desired quantity of itens per page
+      name: pageSize
+      schema:
+        type: integer
+        format: int32
+        default: 10
+        minimum: 10
+        maximum: 100

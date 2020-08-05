@@ -1,0 +1,52 @@
+get:
+  operationId: get-tasks
+  summary: Returns a paged list of tasks.
+  description: Returns a paged list of active tasks
+  tags:
+    - Tasks
+  parameters:
+    - $ref: '../../parameters/page-parameters.yaml#/components/parameters/page'
+    - $ref: '../../parameters/page-parameters.yaml#/components/parameters/pageSize'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/pagedTask.yaml#/components/schemas/PagedTask'
+    '500':
+      description: Internal Server Error
+post:
+  operationId: create-task
+  summary: Create a task
+  description: Create a new task
+  tags:
+    - Tasks
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/task.yaml#/components/schemas/Task'
+  responses:
+    '201':
+      description: Created
+      headers:
+        Location:
+          description: 'Location of the created task /tasks/{id}'
+          schema:
+            type: string
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/problemDetails.yaml#/components/schemas/ProblemDetails'
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/problemDetails.yaml#/components/schemas/ProblemDetails'
+    '500':
+      description: Internal Server Error

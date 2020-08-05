@@ -1,0 +1,17 @@
+components:
+  schemas:
+    Task:
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          description: Task unique identifier
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          description: Task name
+          type: string
+          example: Todo Service
+      additionalProperties: false

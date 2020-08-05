@@ -1,0 +1,91 @@
+get:
+  operationId: get-task
+  summary: Get task by id
+  description: Return a task
+  tags:
+    - Tasks
+  parameters:
+    - in: path
+      name: id
+      description: Task id
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/task.yaml#/components/schemas/Task'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/problemDetails.yaml#/components/schemas/ProblemDetails'
+    '500':
+      description: Internal Server Error
+put:
+  operationId: update-task
+  summary: Update a task
+  description: Update a task
+  tags:
+    - Tasks
+  parameters:
+    - in: path
+      name: id
+      description: Task id
+      required: true
+      schema:
+        type: string
+        format: uuid
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/task.yaml#/components/schemas/Task'
+  responses:
+    '204':
+      description: No Content
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/problemDetails.yaml#/components/schemas/ProblemDetails'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/problemDetails.yaml#/components/schemas/ProblemDetails'
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/problemDetails.yaml#/components/schemas/ProblemDetails'
+    '500':
+      description: Internal Server Error
+delete:
+  operationId: delete-task
+  summary: Delete a task
+  description: Delete a task
+  tags:
+    - Tasks
+  parameters:
+    - in: path
+      name: id
+      description: Task id
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '204':
+      description: No content
+    '500':
+      description: Internal Server Error

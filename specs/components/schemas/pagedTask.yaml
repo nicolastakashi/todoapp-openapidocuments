@@ -1,0 +1,20 @@
+components:
+  schemas:
+    PagedTask:
+      type: object
+      properties:
+        total:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 2147483647
+        totalOfPages:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 2147483647
+        values:
+          type: array
+          items:
+            $ref: 'task.yaml#/components/schemas/Task'
+      additionalProperties: false

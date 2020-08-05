@@ -1,0 +1,26 @@
+openapi: 3.0.0
+info:
+  title: Todo App API
+  description: Todo App API.
+  version: v1
+  contact:
+    email: 'nicolas.tcs@hotmail.com'
+    name: 'Nicolas Takashi'
+servers:
+  - url: http://127.0.0.1:4010
+    description: Mock Server
+tags:
+  - name: Tasks
+paths:
+  '/tasks':
+    $ref: './components/paths/tasks/task.yaml'
+  '/tasks/{id}':
+    $ref: './components/paths/tasks/task-by-id.yaml'
+components:
+  schemas:
+    Task:
+      $ref: 'components/schemas/task.yaml#/components/schemas/Task'
+    PagedTask:
+      $ref: 'components/schemas/pagedTask.yaml#/components/schemas/PagedTask'
+    ProblemDetails:
+      $ref: 'components/schemas/problemDetails.yaml#/components/schemas/ProblemDetails'
