@@ -2,6 +2,8 @@
 
 ![CI](https://github.com/nicolastakashi/todoapp-openapidocuments/workflows/CI/badge.svg?branch=master)
 
+This repository contains examples that were used in the post I made on my Medium account, showing how to design an API using an API-First strategy, you can check the post [here.](https://medium.com/@nicolastakashi/restful-using-api-first-cd305e59305d?sk=c7e0e73751dbd62ddea2cf9928dec49c)
+
 ## Runing
 
 If you want to lint and run a mock server, you must to install the dependencies before, as you can see below.
