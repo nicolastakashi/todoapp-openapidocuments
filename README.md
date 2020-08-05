@@ -19,7 +19,9 @@ Spectral is an open-source project that works like a linter to OpenAPI documents
 
 To run Spectral you can just run the command below. 
 
-```yarn lint```
+```
+yarn lint
+```
 
 ## Running Mock Server
 
