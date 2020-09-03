@@ -34,8 +34,10 @@ post:
       headers:
         Location:
           description: 'Location of the created task /tasks/{id}'
+          example:  http://127.0.0.1:4010/tasks/0301f2cb-0a7f-c41f-aa7a-da9b8ba2f1bb
           schema:
             type: string
+            format: uri
     '400':
       description: Bad Request
       content:
