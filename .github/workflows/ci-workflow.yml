@@ -24,7 +24,7 @@ jobs:
 
     - name: Yarn CLI
       uses: CultureHQ/actions-yarn@v1.0.1
-      
+
     # Install project dependencies
     - name: Install dependencies
       run: yarn
@@ -32,3 +32,15 @@ jobs:
     # Linting OpenAPI documents
     - name: Lint documents
       run: yarn lint
+
+    - name: install swashbuckle CLI
+      run: dotnet tool install Swashbuckle.AspNetCore.Cli --tool-path .
+
+    - name: build api
+      run: dotnet build ./api/TodoApp.Api/TodoApp.Api.csproj --configuration Release
+
+    - name: extract api contract
+      run: swagger tofile --yaml --output ./bin/swagger.yaml ./api/TodoApp.Api/bin/Release/netcoreapp3.1/TodoApp.Api.dll v1
+
+    - name: contract test
+      run: yarn contract-test

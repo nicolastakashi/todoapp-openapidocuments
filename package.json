@@ -10,7 +10,9 @@
     "mock": "prism mock ./bin/api.yaml -d",
     "bundle": "swagger-cli bundle specs/api.yaml -o ./bin/api.yaml -t yaml",
     "prelint": "yarn bundle",
-    "lint": "spectral lint ./bin/api.yaml --ignore-unknown-format"
+    "lint": "spectral lint ./bin/api.yaml --ignore-unknown-format",
+    "precontract-test":"yarn bundle",
+    "contract-test": "openapi-diff ./bin/api.yaml ./bin/swagger.yaml"
   },
   "dependencies": {
     "@openapitools/openapi-generator-cli": "^1.0.15-4.3.1",
