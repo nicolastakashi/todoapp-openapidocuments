@@ -9,8 +9,7 @@ This repository contains examples that were used in the post I made on my Medium
 If you want to lint and run a mock server, you must to install the dependencies before, as you can see below.
 
 ```
-yarn // or
-npm install
+yarn 
 ```
 
 ## Linting OpenAPI Documents
@@ -28,4 +27,13 @@ yarn lint
 
 ## Running Mock Server
 
-Coming Soon.
+Give a Mock Server with dynamic data to your clients taste your API Design and provide fast feedback about the Developer Experience.
+
+Prism is an open-source project that provides us a mock server based on the OpenAPI documents and its structure.
+
+To run Prism you can just run the command below.
+
+```
+yarn mock
+```
+
