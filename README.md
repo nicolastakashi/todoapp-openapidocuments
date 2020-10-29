@@ -37,3 +37,20 @@ To run Prism you can just run the command below.
 yarn mock
 ```
 
+## Contract Testing
+Even after the API was made available, it keeps evolving, and one of the biggest challenges during an API Life-cycle is the API evolution, in order to detect breaking changes and avoid a contract break, we must have a strategy to be notified as soon as possible.
+
+Before you start to test the contracts you must ensure that you have the dotnet installed, since the API used in this repository is an ASP.NET Project.
+After you install Dotnet in your computer, you can install Swashbuclle CLI, running the command below.
+
+```bash
+dotnet tool install Swashbuckle.AspNetCore.Cli -g
+```
+OpenAPI Diff is an open-source project that compares two OpenAPI documents and shows differences between those files, and you can start to test your contracts running the commands below.
+
+```bash
+dotnet build ./api/TodoApp.Api/TodoApp.Api.csproj --configuration Release
+swagger tofile --yaml --output ./bin/swagger.yaml ./api/TodoApp.Api/bin/Release/netcoreapp3.1/TodoApp.Api.dll v1
+yarn contract-test
+```
+
