@@ -2,7 +2,13 @@
 
 ![CI](https://github.com/nicolastakashi/todoapp-openapidocuments/workflows/CI/badge.svg?branch=master)
 
-This repository contains examples that were used in the post I made on my Medium account, showing how to design an API using an API-First strategy, you can check the post [here.](https://medium.com/@nicolastakashi/restful-using-api-first-cd305e59305d?sk=c7e0e73751dbd62ddea2cf9928dec49c)
+This repository contains examples that were used in the post I made on my Medium account, showing how to design an API using an API-First strategy.
+
+### Posts
+* English
+  * [Designing Restful APIs using an API-First Approach](https://nicolastakashi.medium.com/restful-using-api-first-cd305e59305d)
+  * [Designing Restful APIs using an API-First Approach — Mocking](https://nicolastakashi.medium.com/designing-apis-using-an-api-first-approach-mock-server-78ddbd9993f5)
+  * [Designing Restful APIs using an API-First Approach — Contract Test](https://nicolastakashi.medium.com/designing-restful-apis-using-an-api-first-approach-contract-test-34bde79603dd)
 
 ## Runing
 
