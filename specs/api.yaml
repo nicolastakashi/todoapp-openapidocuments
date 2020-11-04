@@ -1,11 +1,19 @@
 openapi: 3.0.0
 info:
   title: Todo App API
-  description: Todo App API.
-  version: v1
+  description: API used as sample during the Blog Posts series talking about API Design.
+  version: "1.0"
   contact:
     email: 'nicolas.tcs@hotmail.com'
     name: 'Nicolas Takashi'
+    url: 'https://nicolastakashi.medium.com'
+  x-logo:
+    url: "https://redocly.github.io/redoc/petstore-logo.png"
+    backgroundColor: "#FFFFFF"
+    altText: "Petstore logo"
+  license:
+    name: MIT
+    url: https://raw.githubusercontent.com/nicolastakashi/todoapp-openapidocuments/master/LICENSE
 servers:
   - url: http://127.0.0.1:4010
     description: Mock Server

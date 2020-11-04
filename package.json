@@ -12,7 +12,9 @@
     "prelint": "yarn bundle",
     "lint": "spectral lint ./bin/api.yaml --ignore-unknown-format",
     "precontract-test": "yarn bundle",
-    "contract-test": "openapi-diff ./bin/api.yaml ./bin/swagger.yaml"
+    "contract-test": "openapi-diff ./bin/api.yaml ./bin/swagger.yaml",
+    "prestart-doc": "swagger-cli bundle specs/api.yaml -o ./docs/src/api.json -t json",
+    "start-doc": "yarn --cwd ./docs start"
   },
   "dependencies": {
     "@openapitools/openapi-generator-cli": "^2.0.3",
