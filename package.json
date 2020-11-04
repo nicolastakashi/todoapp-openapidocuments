@@ -15,9 +15,9 @@
     "contract-test": "openapi-diff ./bin/api.yaml ./bin/swagger.yaml"
   },
   "dependencies": {
-    "@openapitools/openapi-generator-cli": "^1.0.15-4.3.1",
-    "@stoplight/prism-cli": "^4.0.0",
-    "@stoplight/spectral": "^5.5.0",
+    "@openapitools/openapi-generator-cli": "^2.0.3",
+    "@stoplight/prism-cli": "^4.1.0",
+    "@stoplight/spectral": "^5.7.1",
     "openapi-diff": "^0.23.3",
     "swagger-cli": "^4.0.4"
   }
