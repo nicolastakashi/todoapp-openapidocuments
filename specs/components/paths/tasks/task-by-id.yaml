@@ -2,6 +2,9 @@ get:
   operationId: get-task
   summary: Get task by id
   description: Return a task
+  x-codeSamples:
+    - $ref: '../../../code_samples/js/tasks-by-id/get.yaml'
+    - $ref: '../../../code_samples/shell/tasks-by-id/get.yaml'
   tags:
     - Tasks
   parameters:
@@ -31,6 +34,9 @@ put:
   operationId: update-task
   summary: Update a task
   description: Update a task
+  x-codeSamples:
+    - $ref: '../../../code_samples/js/tasks-by-id/put.yaml'
+    - $ref: '../../../code_samples/shell/tasks-by-id/put.yaml'
   tags:
     - Tasks
   parameters:
@@ -74,6 +80,9 @@ delete:
   operationId: delete-task
   summary: Delete a task
   description: Delete a task
+  x-codeSamples:
+    - $ref: '../../../code_samples/js/tasks-by-id/delete.yaml'
+    - $ref: '../../../code_samples/shell/tasks-by-id/delete.yaml'
   tags:
     - Tasks
   parameters:

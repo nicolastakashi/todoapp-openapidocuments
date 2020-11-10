@@ -2,6 +2,9 @@ get:
   operationId: get-tasks
   summary: Returns a paged list of tasks.
   description: Returns a paged list of active tasks
+  x-codeSamples:
+    - $ref: '../../../code_samples/js/tasks/get.yaml'
+    - $ref: '../../../code_samples/shell/tasks/get.yaml'
   tags:
     - Tasks
   parameters:
@@ -20,6 +23,9 @@ post:
   operationId: create-task
   summary: Create a task
   description: Create a new task
+  x-codeSamples:
+    - $ref: '../../../code_samples/js/tasks/post.yaml'
+    - $ref: '../../../code_samples/shell/tasks/post.yaml'
   tags:
     - Tasks
   requestBody:

@@ -3,7 +3,12 @@ import File from './api.json'
 
 function App() {
   return (
-    <RedocStandalone specUrl={File}/>
+    <RedocStandalone
+      specUrl={File}
+      options={{
+        hideSchemaTitles: true
+      }}
+    />
   );
 }
 

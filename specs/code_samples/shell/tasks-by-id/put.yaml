@@ -1,0 +1,6 @@
+lang: Shell
+source: |- 
+  curl --location --request PUT 'http://{server_url}/tasks/3fa85f64-5717-4562-b3fc-2c963f66afa6' \
+  --header 'accept: */*' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{"name":"Todo Service"}'

@@ -1,0 +1,6 @@
+lang: Shell
+source: |- 
+  curl --location --request POST 'http://{server_url}/tasks' \
+  --header 'accept: */*' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{"name":"Todo Service"}'
