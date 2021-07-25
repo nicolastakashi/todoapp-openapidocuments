@@ -40,7 +40,7 @@ jobs:
       run: dotnet build ./api/TodoApp.Api/TodoApp.Api.csproj --configuration Release
 
     - name: extract api contract
-      run: dotnet swagger tofile --yaml --output ./bin/swagger.yaml ./api/TodoApp.Api/bin/Release/netcoreapp3.1/TodoApp.Api.dll v1
+      run: swagger tofile --yaml --output ./bin/swagger.yaml ./api/TodoApp.Api/bin/Release/netcoreapp3.1/TodoApp.Api.dll v1
 
     - name: contract test
       run: yarn contract-test
