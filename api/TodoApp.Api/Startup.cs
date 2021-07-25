@@ -53,12 +53,9 @@ namespace TodoApp.Api
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo App API V1");
                 c.RoutePrefix = string.Empty;
             });
-            app.UseHttpsRedirection();
 
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
