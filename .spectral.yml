@@ -1,0 +1,22 @@
+functionsDir: "./espectral-functions"
+functions:
+  - contains
+
+rules:
+  delete-must-have-204-response-code-rule:
+    message: "HTTP delete MUST return 204 No Content"
+    given: $.paths[*][delete].responses
+    severity: error
+    then:
+      function: contains
+      functionOptions:
+        values:
+          - 204
+          
+  operations-must-have-code-samples:
+    message: "The operation must have at least one code sample"
+    given: $.paths[*][*]
+    severity: error
+    then:
+      - field: "x-codeSamples"
+        function: truthy
