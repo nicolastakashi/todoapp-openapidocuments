@@ -11,16 +11,16 @@
     "bundle": "swagger-cli bundle specs/api.yaml -o ./bin/api.yaml -t yaml",
     "prelint": "yarn bundle",
     "lint": "spectral lint ./bin/api.yaml --ignore-unknown-format",
-    "precontract-test": "yarn bundle",
+    "precontract-test": "dotnet build api/TodoApp.Api/TodoApp.Api.csproj && swagger tofile --yaml --output ./bin/swagger.yaml api/TodoApp.Api/bin/Debug/netcoreapp3.1/TodoApp.Api.dll v1 && yarn bundle",
     "contract-test": "openapi-diff ./bin/api.yaml ./bin/swagger.yaml",
     "prestart-doc": "swagger-cli bundle specs/api.yaml -o ./docs/src/api.json -t json",
     "start-doc": "yarn --cwd ./docs start"
   },
   "dependencies": {
-    "@openapitools/openapi-generator-cli": "^2.0.3",
-    "@stoplight/prism-cli": "^4.1.0",
-    "@stoplight/spectral": "^5.7.1",
-    "openapi-diff": "^0.23.3",
+    "@openapitools/openapi-generator-cli": "^2.3.7",
+    "@stoplight/prism-cli": "^4.3.1",
+    "@stoplight/spectral": "^5.9.1",
+    "openapi-diff": "^0.23.4",
     "swagger-cli": "^4.0.4"
   }
 }
