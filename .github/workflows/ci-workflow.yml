@@ -34,7 +34,7 @@ jobs:
       run: yarn lint
 
     - name: install swashbuckle CLI
-      run: dotnet tool install Swashbuckle.AspNetCore.Cli --tool-path .
+      run: dotnet tool install Swashbuckle.AspNetCore.Cli --global
 
     - name: build api
       run: dotnet build ./api/TodoApp.Api/TodoApp.Api.csproj --configuration Release
